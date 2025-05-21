@@ -1,0 +1,22 @@
+{
+  "name": "R Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "r.rterm.linux": "/usr/bin/R",
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "extensions": [
+    "Ikuyadeu.r",
+    "REditorSupport.r-lsp"
+  ],
+  "remoteUser": "rstudio",
+  "remoteEnv": {
+    "VSCODE_AGENT_FOLDER": "/home/rstudio/.vscode-server"
+  },
+  "workspaceFolder": "/home/rstudio/workspace",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/home/rstudio/workspace,type=bind"
+  ]
+}
