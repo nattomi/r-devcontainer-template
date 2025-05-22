@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y \
     nano && \
     rm -rf /var/lib/apt/lists/*
 
+RUN Rscript -e 'install.packages("languageserver", repos="https://cloud.r-project.org")'
+
 # Add a non-root user for VS Code
 RUN useradd -ms /bin/bash rstudio
 USER rstudio

@@ -3,14 +3,6 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "settings": {
-    "r.rterm.linux": "/usr/bin/R",
-    "terminal.integrated.defaultProfile.linux": "bash"
-  },
-  "extensions": [
-    "Ikuyadeu.r",
-    "REditorSupport.r-lsp"
-  ],
   "remoteUser": "rstudio",
   "remoteEnv": {
     "VSCODE_AGENT_FOLDER": "/home/rstudio/.vscode-server"
@@ -18,5 +10,16 @@
   "workspaceFolder": "/home/rstudio/workspace",
   "mounts": [
     "source=${localWorkspaceFolder},target=/home/rstudio/workspace,type=bind"
-  ]
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "REditorSupport.r"
+      ],
+      "settings": {
+        "r.rterm.linux": "/usr/local/bin/R",
+        "r.lsp.path": "/usr/local/bin/R"
+      }
+    }
+  }
 }
